@@ -3,9 +3,6 @@ import "../styles/App.css";
 import Component from "./Component";
 import ErrorBoundary from "./ErrorBoundary";
 const App = () => {
-  errorGenerator = () => {
-    throw new Error('Uncaught Exception');
-  }
 
   return (
 
