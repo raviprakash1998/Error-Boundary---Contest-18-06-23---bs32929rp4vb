@@ -1,20 +1,15 @@
 import React, { useState } from "react";
 
 const Component = (props) => {
-    
-    const [error, setError] = useState(false);
-    
-    errorGenerator = () => {
-    throw new Error('Uncaught Exception');
+  const [error, setError] = useState(false);
+
+  props.change(setError);
+
+  if (error) {
+    throw new Error("Error");
   }
 
-  return (
-    <>
-    {    
-        error && <div>{somethingNotDefined}</div>
-    }
-    </>
-  );
+  return <></>;
 };
 
 export default Component;
